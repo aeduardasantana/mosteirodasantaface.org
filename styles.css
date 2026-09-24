@@ -532,3 +532,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .email-dialog-actions{flex-direction:column-reverse}
   .dialog-button{width:100%}
 }
+
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin:12px 0 0;
+  font:11px Inter,sans-serif;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+.footer-social span{color:var(--gold);opacity:.7}
