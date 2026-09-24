@@ -43,18 +43,26 @@ if(emailForm&&emailModal){
     const nome=(document.querySelector('#nome')?.value||'').trim();
     const telefone=(document.querySelector('#telefone')?.value||'').trim();
     const email=(document.querySelector('#email')?.value||'').trim();
-    const assunto=(document.querySelector('#assunto')?.value||'').trim();
+    const tipoAssunto=(document.querySelector('#tipo-assunto')?.value||'').trim();
+    const mensagem=(document.querySelector('#mensagem')?.value||'').trim();
 
-    const subject='Contato pelo site - Mosteiro da Santa Face';
+    if(!tipoAssunto){
+      document.querySelector('#tipo-assunto')?.focus();
+      return;
+    }
+
+    const subject=tipoAssunto+' - Mosteiro da Santa Face';
     const lines=[
-      'Contato e Pedido de Oração',
+      'Contato pelo site do Mosteiro da Santa Face',
+      '',
+      'Assunto: '+tipoAssunto,
       '',
       nome ? 'Nome: '+nome : '',
       telefone ? 'Telefone: '+telefone : '',
       email ? 'E-mail: '+email : '',
       '',
-      assunto ? 'Mensagem:' : '',
-      assunto
+      mensagem ? 'Mensagem:' : '',
+      mensagem
     ].filter(Boolean);
 
     pendingMailto='mailto:mosteirodasantaface@gmail.com?subject='+
