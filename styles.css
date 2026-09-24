@@ -412,3 +412,44 @@ h1{
   .info-panel,.contact-card,.prayer-form{padding:24px}
   .grade-list{columns:1}
 }
+
+
+/* Etapa 6 - Responsividade e acessibilidade */
+:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px
+}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px
+}
+.main-nav a,.institutional-nav a,.doc-link,.copy-button,.form-button{min-height:44px}
+.reading img{height:auto;max-width:100%}
+.reading p,.reading li,.hero-quote p{overflow-wrap:anywhere}
+@media(max-width:1100px){
+  .header-inner{max-width:100%}
+  .main-nav{gap:16px}
+}
+@media(max-width:900px){
+  .main-nav a{min-height:46px;display:flex;align-items:center}
+}
+@media(max-width:480px){
+  .header-inner{padding-left:14px;padding-right:14px}
+  .brand-short{max-width:155px}
+  .page-hero h1{font-size:32px}
+  .reading,.reading.wide,.info-grid,.contact-layout{width:calc(100% - 28px)}
+  .info-panel,.contact-card,.prayer-form{padding:20px}
+  .copy-row{align-items:flex-start;flex-direction:column}
+  .copy-button{width:100%}
+}
+@media(max-width:360px){
+  .brand-short{font-size:12px;max-width:132px}
+  .hero{padding-left:16px;padding-right:16px}
+  h1{font-size:34px}
+  .hero-quote{font-size:17px}
+  .page-hero h1{font-size:29px}
+}
+@media(prefers-contrast:more){
+  :root{--line:rgba(176,138,71,.72)}
+  .site-footer{color:var(--ivory)}
+}
