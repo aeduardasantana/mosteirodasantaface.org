@@ -51,7 +51,7 @@ if(emailForm&&emailModal){
       return;
     }
 
-    const subject=tipoAssunto+' - Mosteiro da Santa Face';
+    const subject='CONTATO SITE - '+tipoAssunto+' - MOSTEIRO DA SANTA FACE';
     const lines=[
       'Contato pelo site do Mosteiro da Santa Face',
       '',
