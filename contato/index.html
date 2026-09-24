@@ -20,14 +20,28 @@
 <article class="contact-card"><h2>Visitas Agendadas</h2></article>
 <article class="contact-card"><h2>Redes Sociais</h2><p>e-mail: <a href="mailto:mosteirodasantaface@gmail.com">mosteirodasantaface@gmail.com</a></p><p>Rua Trajano Balduíno, n 312, Centro.</p><p>Formosa - Goiás, CEP 73.801-430</p><p>@mosteirodasantaface.oficial</p><p>@mosteirodasantaface</p></article>
 </div>
-<form class="prayer-form"><h2>Contato e Pedido de Oração</h2><p class="form-note">Os campos de identificação não são obrigatórios.</p>
+<form class="prayer-form" id="email-form"><h2>Contato e Pedido de Oração</h2><p class="form-note">Os campos de identificação não são obrigatórios.</p>
 <div class="form-field"><label for="nome">Nome</label><input id="nome" name="nome"></div>
 <div class="form-field"><label for="telefone">Telefone</label><input id="telefone" name="telefone"></div>
 <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email"></div>
 <div class="form-field"><label for="assunto">Assunto</label><textarea id="assunto" name="assunto"></textarea></div>
 <button class="form-button" type="submit">ENVIAR</button>
-<p class="form-success" hidden>Sua mensagem foi enviada com sucesso! Lembre-se de nós em suas orações.</p>
-</form></section></main>
+<p class="form-note form-explainer">Ao enviar, o site preparará a mensagem e pedirá sua autorização antes de abrir o aplicativo de e-mail. Nada será enviado automaticamente.</p>
+</form></section>
+
+<dialog class="email-dialog" id="email-confirmation-modal" aria-labelledby="email-dialog-title">
+  <div class="email-dialog-inner">
+    <div class="email-dialog-mark" aria-hidden="true">✠</div>
+    <h2 id="email-dialog-title">Abrir seu e-mail?</h2>
+    <p>A mensagem será organizada com as informações preenchidas e aberta no seu aplicativo de e-mail.</p>
+    <p class="email-dialog-emphasis">Nada será enviado automaticamente. Você poderá revisar a mensagem antes de enviá-la ao Mosteiro.</p>
+    <div class="email-dialog-actions">
+      <button class="dialog-button secondary" type="button" data-email-cancel>Cancelar</button>
+      <button class="dialog-button primary" type="button" data-email-confirm>Abrir e-mail</button>
+    </div>
+  </div>
+</dialog>
+</main>
 <footer class="site-footer"><div class="footer-inner">
 <img src="/assets/LOGO/LOGO%20MOSTEIRO%20DA%20SANTA%20FACE.png" alt="" aria-hidden="true">
 <p class="footer-name">Mosteiro da Santa Face e do Puríssimo e Doloroso Coração de Maria</p>
