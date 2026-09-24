@@ -641,3 +641,52 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .photo-grid-home,.photo-grid-full{grid-template-columns:1fr 1fr}
   .photo-grid{gap:7px}
 }
+
+/* Entrada da seção Espiritualidade */
+.spirituality-options{
+  width:min(1080px,calc(100% - 40px));
+  margin:0 auto;
+  padding:64px 0 78px;
+}
+.spirituality-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.spirituality-card{
+  min-height:280px;
+  display:flex;
+  flex-direction:column;
+  padding:28px;
+  border:1px solid var(--line);
+  background:rgba(251,248,241,.78);
+  box-shadow:0 12px 34px rgba(63,10,16,.06);
+  text-decoration:none;
+  transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+.spirituality-card:hover,.spirituality-card:focus{
+  transform:translateY(-2px);
+  background:var(--wine-dark);
+  color:var(--ivory);
+}
+.spirituality-card>span{
+  font:600 10px Inter,sans-serif;
+  letter-spacing:.14em;
+  color:var(--gold);
+}
+.spirituality-card h3{
+  margin:18px 0 12px;
+  font-size:30px;
+  line-height:1.05;
+}
+.spirituality-card:hover h3,.spirituality-card:focus h3{color:var(--ivory)}
+.spirituality-card p{margin:0 0 22px}
+.spirituality-card strong{
+  margin-top:auto;
+  font:600 11px Inter,sans-serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--wine);
+}
+.spirituality-card:hover strong,.spirituality-card:focus strong{color:var(--gold)}
+@media(max-width:820px){.spirituality-grid{grid-template-columns:1fr}.spirituality-card{min-height:auto}}
