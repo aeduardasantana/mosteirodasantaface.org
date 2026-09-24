@@ -16,7 +16,7 @@ body{
   background:var(--ivory);
   color:var(--ink);
   font-family:"EB Garamond", Georgia, serif;
-  font-size:19px;
+  font-size:17px;
   line-height:1.72;
 }
 body::before{
@@ -47,32 +47,32 @@ button,input,textarea{font:inherit}
   border-bottom:1px solid var(--line);
 }
 .header-inner{
-  max-width:1240px;margin:auto;min-height:82px;padding:10px 28px;
+  max-width:1240px;margin:auto;min-height:68px;padding:8px 24px;
   display:flex;align-items:center;justify-content:space-between;gap:28px;
 }
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:52px;height:52px;object-fit:contain}
+.brand img{width:42px;height:42px;object-fit:contain}
 .brand-short{
   font-family:"Cormorant Garamond",serif;
-  text-transform:uppercase;letter-spacing:.08em;font-size:17px;font-weight:700;color:var(--wine-dark)
+  text-transform:uppercase;letter-spacing:.08em;font-size:14px;font-weight:700;color:var(--wine-dark)
 }
-.main-nav{display:flex;align-items:center;gap:26px;font-family:Inter,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.09em}
+.main-nav{display:flex;align-items:center;gap:22px;font-family:Inter,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.09em}
 .main-nav a{text-decoration:none;padding:10px 0;border-bottom:1px solid transparent}
 .main-nav a:hover,.main-nav a[aria-current="page"]{color:var(--wine);border-color:var(--gold)}
 .menu-toggle{display:none;background:none;border:0;padding:10px}
 .menu-toggle span:not(.sr-only){display:block;width:26px;height:1px;background:var(--wine-dark);margin:6px 0}
 
 .hero{
-  min-height:calc(100vh - 82px);
+  min-height:auto;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:76px 24px 86px;
+  text-align:center;padding:46px 24px 58px;
   background:
     linear-gradient(rgba(251,248,241,.84),rgba(245,240,230,.92)),
     radial-gradient(circle at 50% 25%,rgba(176,138,71,.16),transparent 45%);
   border-bottom:1px solid var(--line);
 }
-.hero-ornament{font-size:22px;color:var(--gold);margin-bottom:12px}
-.hero-logo{width:min(180px,42vw);filter:drop-shadow(0 10px 22px rgba(63,10,16,.12));margin-bottom:18px}
+.hero-ornament{font-size:18px;color:var(--gold);margin-bottom:8px}
+.hero-logo{width:min(132px,34vw);filter:drop-shadow(0 10px 22px rgba(63,10,16,.12));margin-bottom:14px}
 h1,h2,h3{
   font-family:"Cormorant Garamond",serif;
   color:var(--wine-dark);
@@ -80,42 +80,42 @@ h1,h2,h3{
 }
 h1{
   margin:0;
-  font-size:clamp(44px,6vw,78px);
-  line-height:.98;
+  font-size:clamp(36px,4.4vw,56px);
+  line-height:1.02;
   font-weight:600;
   letter-spacing:-.025em;
 }
-.divider{width:min(430px,80vw);display:flex;align-items:center;gap:16px;margin:34px auto 28px;color:var(--gold)}
+.divider{width:min(430px,80vw);display:flex;align-items:center;gap:16px;margin:24px auto 20px;color:var(--gold)}
 .divider span{height:1px;flex:1;background:linear-gradient(to right,transparent,var(--gold),transparent)}
 .divider b{font-weight:400}
-.hero-quote{max-width:900px;margin:0;color:#3d342c;font-size:clamp(20px,2.1vw,27px);line-height:1.55;font-style:italic}
+.hero-quote{max-width:760px;margin:0;color:#3d342c;font-size:clamp(18px,1.55vw,22px);line-height:1.55;font-style:italic}
 .hero-quote p{margin:0}
-.hero-quote cite{display:block;margin-top:14px;font-size:15px;font-family:Inter,sans-serif;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)}
+.hero-quote cite{display:block;margin-top:10px;font-size:12px;font-family:Inter,sans-serif;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)}
 
-.memory-section{max-width:1180px;margin:auto;padding:104px 28px}
-.section-heading{text-align:center;max-width:790px;margin:0 auto 54px}
-.eyebrow{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.section-heading h2{font-size:clamp(38px,4.4vw,58px);line-height:1.05;margin:10px 0 0}
-.memory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.memory-section{max-width:1040px;margin:auto;padding:72px 28px}
+.section-heading{text-align:center;max-width:700px;margin:0 auto 38px}
+.eyebrow{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.section-heading h2{font-size:clamp(30px,3.2vw,44px);line-height:1.05;margin:10px 0 0}
+.memory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .quote-card{
-  min-height:260px;padding:38px 38px 34px;
+  min-height:210px;padding:28px 30px 26px;
   border:1px solid var(--line);
   background:rgba(251,248,241,.8);
   box-shadow:var(--shadow);
   position:relative;
 }
 .quote-card::after{content:"";position:absolute;inset:8px;border:1px solid rgba(176,138,71,.16);pointer-events:none}
-.quote-mark{font-family:"Cormorant Garamond",serif;font-size:76px;line-height:.7;color:rgba(176,138,71,.48)}
-.quote-card p{margin:20px 0 0;font-size:21px;line-height:1.55;font-style:italic}
-.source{text-align:center;margin:34px 0 0;color:var(--wine);font-style:italic}
+.quote-mark{font-family:"Cormorant Garamond",serif;font-size:58px;line-height:.7;color:rgba(176,138,71,.48)}
+.quote-card p{margin:14px 0 0;font-size:18px;line-height:1.55;font-style:italic}
+.source{text-align:center;margin:24px 0 0;color:var(--wine);font-style:italic}
 
 .institutional-nav{
-  max-width:1180px;margin:0 auto 110px;padding:0 28px;
+  max-width:1040px;margin:0 auto 76px;padding:0 28px;
   display:grid;grid-template-columns:repeat(5,1fr);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
 }
 .institutional-nav a{
-  min-height:150px;padding:26px 20px;text-decoration:none;
+  min-height:118px;padding:20px 16px;text-decoration:none;
   display:flex;flex-direction:column;justify-content:center;gap:10px;
   border-right:1px solid var(--line);
   transition:background .2s ease,color .2s ease;
@@ -123,24 +123,24 @@ h1{
 .institutional-nav a:first-child{border-left:1px solid var(--line)}
 .institutional-nav a:hover{background:var(--wine-dark);color:var(--ivory)}
 .institutional-nav span{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;color:var(--gold)}
-.institutional-nav strong{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:600}
+.institutional-nav strong{font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:600}
 
 .site-footer{
   background:var(--wine-dark);
   color:rgba(245,240,230,.88);
-  padding:54px 24px 24px;
+  padding:42px 24px 22px;
   text-align:center;
   border-top:1px solid rgba(176,138,71,.28)
 }
 .footer-inner{max-width:720px;margin:auto}
 .footer-inner>img{
-  width:74px;
+  width:60px;
   margin:0 auto 16px;
   opacity:.94
 }
 .footer-name{
   font-family:"Cormorant Garamond",serif;
-  font-size:22px;
+  font-size:19px;
   line-height:1.2;
   font-weight:600;
   margin:0 auto 18px;
@@ -149,7 +149,7 @@ h1{
 }
 .site-footer address{
   font-family:Inter,sans-serif;
-  font-size:13px;
+  font-size:12px;
   line-height:1.7;
   font-style:normal;
   letter-spacing:.025em;
@@ -163,7 +163,7 @@ h1{
   flex-wrap:wrap;
   gap:8px 12px;
   margin:0;
-  font:13px Inter,sans-serif;
+  font:12px Inter,sans-serif;
   letter-spacing:.02em
 }
 .footer-contact span{color:var(--gold);opacity:.7}
@@ -181,7 +181,7 @@ h1{
   width:min(280px,70%);
   height:1px;
   background:linear-gradient(to right,transparent,rgba(176,138,71,.55),transparent);
-  margin:26px auto 16px
+  margin:20px auto 14px
 }
 .copyright{
   margin:0;
@@ -192,9 +192,9 @@ h1{
 }
 
 @media (max-width:900px){
-  .header-inner{min-height:70px;padding:8px 20px}
-  .brand img{width:46px;height:46px}
-  .brand-short{font-size:15px}
+  .header-inner{min-height:62px;padding:7px 18px}
+  .brand img{width:38px;height:38px}
+  .brand-short{font-size:13px}
   .menu-toggle{display:block}
   .main-nav{
     position:absolute;left:0;right:0;top:100%;
@@ -204,23 +204,23 @@ h1{
   }
   .main-nav.open{display:flex}
   .main-nav a{padding:14px 4px;border-bottom:1px solid rgba(176,138,71,.2)}
-  .hero{min-height:auto;padding:58px 22px 68px}
+  .hero{min-height:auto;padding:40px 20px 52px}
   .memory-grid{grid-template-columns:1fr}
   .institutional-nav{grid-template-columns:1fr 1fr}
-  .institutional-nav a{min-height:116px;border-top:1px solid var(--line)}
+  .institutional-nav a{min-height:96px;border-top:1px solid var(--line)}
 }
 @media (max-width:560px){
   body{font-size:18px}
   .brand-short{max-width:180px;line-height:1.05}
   h1{font-size:42px}
   .hero-logo{width:145px}
-  .hero-quote{font-size:20px}
-  .memory-section{padding:78px 20px}
-  .quote-card{padding:30px 26px;min-height:auto}
-  .quote-card p{font-size:20px}
+  .hero-quote{font-size:18px}
+  .memory-section{padding:58px 20px}
+  .quote-card{padding:24px 22px;min-height:auto}
+  .quote-card p{font-size:18px}
   .institutional-nav{grid-template-columns:1fr;margin-bottom:80px;padding:0 20px}
   .institutional-nav a,.institutional-nav a:first-child{border-left:1px solid var(--line);border-right:1px solid var(--line)}
-  .site-footer{padding-top:46px}
+  .site-footer{padding-top:38px}
   .footer-name{font-size:20px}
   .footer-contact{flex-direction:column;gap:7px}
 }
