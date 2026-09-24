@@ -21,3 +21,11 @@ document.querySelectorAll('[data-copy]').forEach(button=>{
     }catch(e){}
   });
 });
+
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&nav&&btn){
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    btn.focus();
+  }
+});
