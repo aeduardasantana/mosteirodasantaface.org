@@ -95,3 +95,30 @@ if(emailModal){
     pendingMailto='';
   });
 }
+
+const galleryDialog=document.querySelector('#gallery-dialog');
+const galleryDialogImage=galleryDialog?.querySelector('img');
+const galleryClose=galleryDialog?.querySelector('.gallery-close');
+
+document.querySelectorAll('[data-gallery-src]').forEach(item=>{
+  item.addEventListener('click',()=>{
+    if(!galleryDialog||!galleryDialogImage) return;
+    galleryDialogImage.src=item.getAttribute('data-gallery-src')||'';
+    galleryDialogImage.alt=item.getAttribute('data-gallery-alt')||'Fotografia ampliada do Mosteiro da Santa Face';
+    if(typeof galleryDialog.showModal==='function') galleryDialog.showModal();
+  });
+});
+if(galleryClose){
+  galleryClose.addEventListener('click',()=>galleryDialog?.close());
+}
+if(galleryDialog){
+  galleryDialog.addEventListener('click',event=>{
+    if(event.target===galleryDialog) galleryDialog.close();
+  });
+  galleryDialog.addEventListener('close',()=>{
+    if(galleryDialogImage){
+      galleryDialogImage.src='';
+      galleryDialogImage.alt='';
+    }
+  });
+}
