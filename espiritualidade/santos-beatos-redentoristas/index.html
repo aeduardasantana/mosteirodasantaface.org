@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://site.mosteirodasantaface.org/espiritualidade/santos-beatos-redentoristas/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Mosteiro da Santa Face">
+<meta property="og:title" content="Santos e Beatos Redentoristas | Mosteiro da Santa Face">
+<meta property="og:description" content="Santos, beatos, veneráveis e Servos de Deus ligados à Congregação e à Família Redentorista.">
+<meta property="og:url" content="https://site.mosteirodasantaface.org/espiritualidade/santos-beatos-redentoristas/">
+<meta property="og:image" content="https://site.mosteirodasantaface.org/assets/LOGO/LOGO%20MOSTEIRO%20DA%20SANTA%20FACE.png">
+<link rel="icon" href="/assets/LOGO/LOGO%20MOSTEIRO%20DA%20SANTA%20FACE.png" type="image/png">
+<title>Santos e Beatos Redentoristas | Mosteiro da Santa Face</title>
+<meta name="description" content="Conheça santos, beatos, veneráveis e Servos de Deus ligados à Congregação e à Família Redentorista, com dados históricos e litúrgicos confirmados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/espiritualidade/santos-beatos-redentoristas/santos-redentoristas.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="/" aria-label="Página inicial do Mosteiro da Santa Face"><img src="/assets/LOGO/LOGO%20MOSTEIRO%20DA%20SANTA%20FACE.png" alt="Brasão do Mosteiro da Santa Face"><span class="brand-short">Mosteiro da Santa Face</span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span><span class="sr-only">Abrir menu</span></button>
+<nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+<a href="/">Início</a><a href="/historia/">História</a><a href="/espiritualidade/" aria-current="page">Espiritualidade</a><a href="/vocacao/">Vocação</a><a href="/ajudar/">Ajudar</a><a href="/contato/">Contato</a>
+</nav></div></header>
+
+<main id="conteudo">
+<section class="page-hero saints-hero">
+  <div class="page-mark">✠</div>
+  <p class="saints-kicker">Espiritualidade redentorista</p>
+  <h1>Santos e Beatos Redentoristas</h1>
+  <p>Conheça santos, beatos, veneráveis e Servos de Deus ligados à Congregação do Santíssimo Redentor e à Família Redentorista.</p>
+</section>
+
+<nav class="saints-subnav" aria-label="Navegação desta página">
+  <a href="#todos">Todos</a>
+  <a href="#calendario">Calendário</a>
+  <a href="#todos" data-filter-link="Santo">Santos</a>
+  <a href="#todos" data-filter-link="Beato">Beatos</a>
+  <a href="#todos" data-filter-link="Venerável">Veneráveis</a>
+  <a href="#todos" data-filter-link="Servo de Deus">Servos de Deus</a>
+</nav>
+
+<section class="saints-intro">
+  <div>
+    <span class="eyebrow">Acervo redentorista</span>
+    <h2>Uma única relação, com informações históricas e litúrgicas separadas</h2>
+  </div>
+  <p>Os dados históricos identificam a pessoa e sua trajetória. Memórias e festas são apresentadas somente quando há confirmação litúrgica ou institucional. A ausência de um campo significa que a informação não foi publicada nesta base como confirmada.</p>
+</section>
+
+<section class="saints-browser" id="todos" aria-labelledby="titulo-lista">
+  <div class="saints-browser-head">
+    <div>
+      <span class="eyebrow">Consulta</span>
+      <h2 id="titulo-lista">Santos, Beatos, Veneráveis e Servos de Deus</h2>
+    </div>
+    <p id="saints-count" class="saints-count" aria-live="polite"></p>
+  </div>
+
+  <div class="saints-tools" role="search">
+    <label class="saints-search">
+      <span>Buscar por nome</span>
+      <input id="saints-search-input" type="search" autocomplete="off" placeholder="Ex.: Afonso, Trčka, Vítor..." aria-controls="saints-list">
+    </label>
+    <label>
+      <span>Condição</span>
+      <select id="saints-status-filter" aria-controls="saints-list">
+        <option value="">Todos</option>
+        <option>Santo</option>
+        <option>Beato</option>
+        <option>Venerável</option>
+        <option>Servo de Deus</option>
+      </select>
+    </label>
+    <label>
+      <span>Mês da memória</span>
+      <select id="saints-month-filter" aria-controls="saints-list">
+        <option value="">Todos os meses</option>
+        <option value="01">Janeiro</option><option value="02">Fevereiro</option><option value="03">Março</option>
+        <option value="04">Abril</option><option value="05">Maio</option><option value="06">Junho</option>
+        <option value="07">Julho</option><option value="08">Agosto</option><option value="09">Setembro</option>
+        <option value="10">Outubro</option><option value="11">Novembro</option><option value="12">Dezembro</option>
+      </select>
+    </label>
+    <button type="button" id="saints-clear" class="saints-clear">Limpar filtros</button>
+  </div>
+
+  <div id="saints-list" class="saints-list" aria-live="polite"></div>
+  <p id="saints-empty" class="saints-empty" hidden>Nenhum registro corresponde aos filtros selecionados.</p>
+</section>
+
+<section class="saints-calendar" id="calendario" aria-labelledby="titulo-calendario">
+  <div class="section-heading">
+    <span class="eyebrow">Datas confirmadas</span>
+    <h2 id="titulo-calendario">Calendário Redentorista</h2>
+    <p>Esta visualização reúne somente memórias ou festas registradas como confirmadas. A data de falecimento, por si só, não é tratada como celebração litúrgica.</p>
+  </div>
+  <div id="saints-calendar-list" class="calendar-months"></div>
+</section>
+
+<section class="saints-note" aria-label="Nota sobre as informações">
+  <strong>Critério da base</strong>
+  <p>Quando uma informação não está suficientemente documentada, ela não é inferida nem preenchida por aproximação. A base técnica conserva as fontes utilizadas para revisão e manutenção.</p>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="footer-inner">
+<img src="/assets/LOGO/LOGO%20MOSTEIRO%20DA%20SANTA%20FACE.png" alt="" aria-hidden="true">
+<p class="footer-name">Mosteiro da Santa Face e do Puríssimo e Doloroso Coração de Maria</p>
+<address>Rua Trajano Balduíno, nº 312, Centro<br>Formosa - Goiás, CEP 73.801-430</address>
+<p class="footer-contact"><a href="tel:+556136312898">(61) 3631-2898</a><span aria-hidden="true">•</span><a href="mailto:mosteirodasantaface@gmail.com">mosteirodasantaface@gmail.com</a></p>
+<p class="footer-social"><a href="https://www.facebook.com/mosteirodasantaface.oficial" target="_blank" rel="noopener noreferrer">Facebook</a><span aria-hidden="true">•</span><a href="https://www.instagram.com/mosteirodasantaface" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+<div class="footer-divider" aria-hidden="true"></div>
+<p class="copyright">© Mosteiro da Santa Face e do Puríssimo e Doloroso Coração de Maria C.Ss.R.</p>
+</div></footer>
+<script src="/script.js"></script>
+<script src="/espiritualidade/santos-beatos-redentoristas/santos-redentoristas.js"></script>
+</body></html>
