@@ -10,3 +10,14 @@ if(btn&&nav){
     btn.setAttribute('aria-expanded','false');
   }));
 }
+document.querySelectorAll('[data-copy]').forEach(button=>{
+  button.addEventListener('click',async()=>{
+    const value=button.getAttribute('data-copy');
+    try{
+      await navigator.clipboard.writeText(value);
+      const original=button.textContent;
+      button.textContent='Copiado';
+      setTimeout(()=>button.textContent=original,1800);
+    }catch(e){}
+  });
+});
