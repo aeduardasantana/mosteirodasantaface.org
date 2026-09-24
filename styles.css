@@ -453,3 +453,73 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   :root{--line:rgba(176,138,71,.72)}
   .site-footer{color:var(--ivory)}
 }
+
+
+/* Confirmação de abertura do e-mail */
+.form-explainer{
+  margin:14px 0 0;
+  padding-top:12px;
+  border-top:1px solid rgba(176,138,71,.22)
+}
+.email-dialog{
+  width:min(520px,calc(100% - 32px));
+  border:1px solid var(--line);
+  padding:0;
+  background:var(--ivory-light);
+  color:var(--ink);
+  box-shadow:0 24px 70px rgba(63,10,16,.22)
+}
+.email-dialog::backdrop{background:rgba(30,20,17,.56)}
+.email-dialog-inner{padding:30px}
+.email-dialog-mark{
+  color:var(--gold);
+  text-align:center;
+  margin-bottom:8px
+}
+.email-dialog h2{
+  margin:0 0 14px;
+  text-align:center;
+  font-size:30px
+}
+.email-dialog p{
+  margin:0 0 14px;
+  text-align:center
+}
+.email-dialog-emphasis{
+  font-family:Inter,sans-serif;
+  font-size:13px;
+  line-height:1.6;
+  padding:12px 14px;
+  border:1px solid rgba(176,138,71,.28);
+  background:rgba(245,240,230,.7)
+}
+.email-dialog-actions{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:22px
+}
+.dialog-button{
+  min-height:44px;
+  border-radius:0;
+  padding:10px 16px;
+  font:11px Inter,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  cursor:pointer
+}
+.dialog-button.secondary{
+  border:1px solid var(--wine);
+  background:transparent;
+  color:var(--wine)
+}
+.dialog-button.primary{
+  border:1px solid var(--wine);
+  background:var(--wine);
+  color:var(--ivory)
+}
+@media(max-width:480px){
+  .email-dialog-inner{padding:24px 20px}
+  .email-dialog-actions{flex-direction:column-reverse}
+  .dialog-button{width:100%}
+}
