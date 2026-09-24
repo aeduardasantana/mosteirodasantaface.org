@@ -125,14 +125,71 @@ h1{
 .institutional-nav span{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;color:var(--gold)}
 .institutional-nav strong{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:600}
 
-.site-footer{background:var(--wine-dark);color:var(--ivory);padding:76px 24px 34px;text-align:center}
-.footer-inner{max-width:820px;margin:auto}
-.footer-inner>img{width:112px;margin:0 auto 22px}
-.footer-name{font-family:"Cormorant Garamond",serif;font-size:29px;line-height:1.15;margin:0 auto 24px;max-width:660px}
-.site-footer address{font-style:normal;margin-bottom:10px}
-.site-footer a{color:var(--ivory);text-decoration-color:rgba(245,240,230,.5);text-underline-offset:3px}
-.footer-divider{height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:34px 0 20px}
-.copyright{font:12px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.site-footer{
+  background:var(--wine-dark);
+  color:rgba(245,240,230,.88);
+  padding:54px 24px 24px;
+  text-align:center;
+  border-top:1px solid rgba(176,138,71,.28)
+}
+.footer-inner{max-width:720px;margin:auto}
+.footer-inner>img{
+  width:74px;
+  margin:0 auto 16px;
+  opacity:.94
+}
+.footer-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:600;
+  margin:0 auto 18px;
+  max-width:560px;
+  color:var(--ivory)
+}
+.site-footer address{
+  font-family:Inter,sans-serif;
+  font-size:13px;
+  line-height:1.7;
+  font-style:normal;
+  letter-spacing:.025em;
+  margin:0 auto 12px;
+  opacity:.78
+}
+.footer-contact{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 12px;
+  margin:0;
+  font:13px Inter,sans-serif;
+  letter-spacing:.02em
+}
+.footer-contact span{color:var(--gold);opacity:.7}
+.site-footer a{
+  color:rgba(245,240,230,.86);
+  text-decoration:none;
+  border-bottom:1px solid rgba(245,240,230,.18);
+  transition:border-color .2s ease,color .2s ease
+}
+.site-footer a:hover{
+  color:#fff;
+  border-color:rgba(176,138,71,.65)
+}
+.footer-divider{
+  width:min(280px,70%);
+  height:1px;
+  background:linear-gradient(to right,transparent,rgba(176,138,71,.55),transparent);
+  margin:26px auto 16px
+}
+.copyright{
+  margin:0;
+  font:10px Inter,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.5
+}
 
 @media (max-width:900px){
   .header-inner{min-height:70px;padding:8px 20px}
@@ -163,7 +220,9 @@ h1{
   .quote-card p{font-size:20px}
   .institutional-nav{grid-template-columns:1fr;margin-bottom:80px;padding:0 20px}
   .institutional-nav a,.institutional-nav a:first-child{border-left:1px solid var(--line);border-right:1px solid var(--line)}
-  .site-footer{padding-top:62px}
+  .site-footer{padding-top:46px}
+  .footer-name{font-size:20px}
+  .footer-contact{flex-direction:column;gap:7px}
 }
 @media (prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important;transition:none!important}
