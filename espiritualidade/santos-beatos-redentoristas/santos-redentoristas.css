@@ -41,3 +41,41 @@
 .saints-note p{margin:8px 0 0}
 @media(max-width:900px){.saints-intro{grid-template-columns:1fr;gap:18px}.saints-tools{grid-template-columns:1fr 1fr}.saints-search{grid-column:1/-1}.saints-list,.calendar-months{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.saints-subnav{justify-content:flex-start}.saints-browser-head{display:block}.saints-count{margin-top:10px}.saints-tools{grid-template-columns:1fr}.saints-search{grid-column:auto}.saints-list,.calendar-months{grid-template-columns:1fr}.saint-card{min-height:auto}.saints-intro{padding-top:42px}}
+
+
+/* Revisão final mobile e acessibilidade */
+.saints-subnav a{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center
+}
+.saints-tools input,.saints-tools select,.saints-clear{
+  font-size:16px
+}
+.saints-clear:focus-visible,
+.saints-tools input:focus-visible,
+.saints-tools select:focus-visible,
+.calendar-month a:focus-visible,
+.saints-subnav a:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px
+}
+.saint-card{scroll-margin-top:92px}
+@media(max-width:620px){
+  .saints-subnav{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    padding:10px 16px;
+    gap:6px 18px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin
+  }
+  .saints-subnav a{flex:0 0 auto;padding:10px 0}
+  .saints-intro,.saints-browser,.saints-calendar,.saints-note{width:calc(100% - 28px)}
+  .saints-tools{padding:16px}
+  .saints-tools input,.saints-tools select,.saints-clear{min-height:48px}
+  .saint-card{padding:22px 20px}
+  .saint-card h3{font-size:25px}
+  .calendar-month{padding:18px}
+}
