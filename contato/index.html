@@ -24,7 +24,21 @@
 <div class="form-field"><label for="nome">Nome</label><input id="nome" name="nome"></div>
 <div class="form-field"><label for="telefone">Telefone</label><input id="telefone" name="telefone"></div>
 <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email"></div>
-<div class="form-field"><label for="assunto">Assunto</label><textarea id="assunto" name="assunto"></textarea></div>
+<div class="form-field">
+  <label for="tipo-assunto">Assunto</label>
+  <select id="tipo-assunto" name="tipo-assunto" required>
+    <option value="" selected disabled>Selecione o assunto</option>
+    <option value="Família - contato com uma irmã do Mosteiro">Família - contato com uma irmã do Mosteiro</option>
+    <option value="Pedido de oração">Pedido de oração</option>
+    <option value="Direção espiritual">Direção espiritual</option>
+    <option value="Informações">Informações</option>
+    <option value="Doações e ajuda ao Mosteiro">Doações e ajuda ao Mosteiro</option>
+    <option value="Vocação">Vocação</option>
+    <option value="Visita agendada">Visita agendada</option>
+    <option value="Outro assunto">Outro assunto</option>
+  </select>
+</div>
+<div class="form-field"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem"></textarea></div>
 <button class="form-button" type="submit">ENVIAR</button>
 <p class="form-note form-explainer">Ao enviar, o site preparará a mensagem e pedirá sua autorização antes de abrir o aplicativo de e-mail. Nada será enviado automaticamente.</p>
 </form></section>
