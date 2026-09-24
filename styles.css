@@ -690,3 +690,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 }
 .spirituality-card:hover strong,.spirituality-card:focus strong{color:var(--gold)}
 @media(max-width:820px){.spirituality-grid{grid-template-columns:1fr}.spirituality-card{min-height:auto}}
+
+
+/* Revisão final de acessibilidade e mobile */
+:root{
+  --vlibras-btn-focus-visible-outline:3px solid #3f0a10;
+  --vlibras-btn-focus-visible-shadow:0 0 0 4px #f5f0e6;
+  --vlibras-btn-hover-filter:brightness(1.08)
+}
+select:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px
+}
+.menu-toggle{min-width:44px;min-height:44px}
+.menu-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:560px){
+  body{overflow-x:hidden}
+  .page-hero{padding-left:18px;padding-right:18px}
+  .page-hero p{font-size:17px;line-height:1.55}
+  .spirituality-options{width:calc(100% - 28px);padding:48px 0 64px}
+  .spirituality-card{padding:24px 20px}
+  .spirituality-card h3{font-size:28px}
+}
