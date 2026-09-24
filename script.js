@@ -122,3 +122,14 @@ if(galleryDialog){
     }
   });
 }
+
+
+/* Acessibilidade em Libras — VLibras Widget oficial */
+(function loadVLibras(){
+  if(document.getElementById('vlibras-widget-script')) return;
+  const vlibras=document.createElement('script');
+  vlibras.id='vlibras-widget-script';
+  vlibras.src='https://vlibras.gov.br/app/vlibras-plugin.js';
+  vlibras.async=true;
+  document.body.appendChild(vlibras);
+})();
